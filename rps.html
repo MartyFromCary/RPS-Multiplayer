@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RPS</title>
+
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-database.js"></script>
+    <script type="text/javascript" src="rps.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">RPS</h1>
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button type="submit" class="btn btn-secondary" id="submitBtn">Enter Name</button>
+                    </div>
+                    <div class="panel-body">
+                        <input type="text" id="name-submit" placeholder="Your Name">
+                    </div>
+                </div>
+                <!--panel-->
+            </div>
+            <!--col-->
+
+            <div class="col col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Status</strong></h3>
+                    </div>
+                    <div class="panel-body" id="status">Please enter your name</div>
+                </div>
+                <!--panel-->
+
+                <div class="row text-center">
+                    <div class="col col-xs-2"></div>
+                    <div class="col col-xs-2">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Wins</div>
+                            <div class="panel-body" id="wins">0</div>
+                        </div>
+                    </div>
+                    <div class="col col-xs-1"></div>
+                    <div class="col col-xs-2">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Losses</div>
+                            <div class="panel-body" id="losses">0</div>
+                        </div>
+                    </div>
+                    <div class="col col-xs-1"></div>
+                    <div class="col col-xs-2">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Ties</div>
+                            <div class="panel-body" id="ties">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--col-->
+
+            <div class="col col-xs-4 text-center choose" data-choice="rock">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><button>Rock</button></div>
+                    <div class="panel-body">
+                        <img id="image-rock" alt="ROCK">
+                    </div>
+                </div>
+                <!--panel-->
+            </div>
+            <!--col-->
+
+            <div class="col col-xs-4 text-center choose" data-choice="paper">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><button>Paper</button></div>
+                    <div class="panel-body">
+                        <img id="image-paper" alt="PAPER">
+                    </div>
+                </div>
+            </div>
+            <!--col-->
+
+            <div class="col col-xs-4 text-center choose" data-choice="scissors">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><button>Scissors</button></div>
+                    <div class="panel-body">
+                        <img id="image-scissors" alt="SCISSORS">
+                    </div>
+                </div>
+            </div>
+            <!--col-->
+
+        </div>
+        <!--row-->
+
+        <div class="row text-center">
+
+            <div class="col col-xs-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Your bet
+                    </div>
+                    <div class="panel-body">
+                        <img id="my-choice" alt="My Choice">
+                    </div>
+                </div>
+            </div>
+            <!--col-->
+
+            <div class="col col-xs-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Opponent's bet
+                    </div>
+                    <div class="panel-body">
+                        <img id="oppo-choice" alt="Opponent Choice">
+                    </div>
+                </div>
+            </div>
+            <!--col-->
+
+        </div>
+        <!--row-->
+
+    </div>
+
+</body>
+
+</html>

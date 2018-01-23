@@ -1,0 +1,14 @@
+img {
+	height: 150px;
+	width: 120px;
+}
+body {
+	background-color: tan;
+	font-size: 20px;
+}
+
+#name-submit {
+	padding: 0.25em;
+	border: solid 1px;
+	border-radius: 5px;
+}
